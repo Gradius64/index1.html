@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Blog Post</title>
+</head>
+<body>
+    <h1>Create a New Blog Post</h1>
+
+    <!-- Blog post form -->
+    <form action="/submit-post" method="POST" enctype="multipart/form-data">
+        
+        <!-- Blog title input -->
+        <div>
+            <label for="title">Blog Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter the title of your blog" required>
+        </div>
+
+        <br>
+
+        <!-- Blog content input -->
+        <div>
+            <label for="content">Blog Content:</label>
+            <textarea id="content" name="content" rows="10" placeholder="Write your blog content here" required></textarea>
+        </div>
+
+        <br>
+
+        <!-- Category input -->
+        <div>
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="Technology">Technology</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="Education">Education</option>
+                <option value="Health">Health</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- Tags input -->
+        <div>
+            <label for="tags">Tags (comma separated):</label>
+            <input type="text" id="tags" name="tags" placeholder="Enter tags, separated by commas">
+        </div>
+
+        <br>
+
+        <!-- Image upload -->
+        <div>
+            <label for="image">Upload an Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+        </div>
+
+        <br>
+
+        <!-- Author name input -->
+        <div>
+            <label for="author">Author Name:</label>
+            <input type="text" id="author" name="author" placeholder="Your name" required>
+        </div>
+
+        <br>
+
+        <!-- Date of publication input -->
+        <div>
+            <label for="date">Date of Publication:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <br>
+
+        <!-- Excerpt input -->
+        <div>
+            <label for="excerpt">Excerpt:</label>
+            <textarea id="excerpt" name="excerpt" rows="4" placeholder="Provide a brief excerpt of your blog post" required></textarea>
+        </div>
+
+        <br>
+
+        <!-- SEO Title input -->
+        <div>
+            <label for="seo_title">SEO Title:</label>
+            <input type="text" id="seo_title" name="seo_title" placeholder="SEO-friendly title for search engines" required>
+        </div>
+
+        <br>
+
+        <!-- SEO Description input -->
+        <div>
+            <label for="seo_description">SEO Description:</label>
+            <textarea id="seo_description" name="seo_description" rows="4" placeholder="Provide a brief SEO description" required></textarea>
+        </div>
+
+        <br>
+
+        <!-- Meta Keywords input -->
+        <div>
+            <label for="meta_keywords">Meta Keywords:</label>
+            <input type="text" id="meta_keywords" name="meta_keywords" placeholder="Comma-separated keywords for SEO" required>
+        </div>
+
+        <br>
+
+        <!-- Privacy setting input -->
+        <div>
+            <label for="privacy">Privacy Settings:</label>
+            <select id="privacy" name="privacy" required>
+                <option value="public" selected>Public</option>
+                <option value="private">Private</option>
+                <option value="draft">Draft</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- Status input -->
+        <div>
+            <label for="status">Post Status:</label>
+            <select id="status" name="status" required>
+                <option value="published" selected>Published</option>
+                <option value="pending">Pending Review</option>
+                <option value="draft">Draft</option>
+            </select>
+        </div>
+
+        <br>
+
+        <!-- Submit button -->
+        <div>
+            <button type="submit">Publish</button>
+        </div>
+        
+    </form>
+</body>
+</html>
